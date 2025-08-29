@@ -26,7 +26,7 @@ public class PropertyController {
     }
 
     @GetMapping
-    public ResponseEntity<?> getAllProperties(@Valid @RequestBody UserDTO userDTO) {
+    public ResponseEntity<?> getAllProperties(@RequestParam(name = "email") UserDTO userDTO) {
 
         return new ResponseEntity<>(service.getAllProperties(userDTO.email()),HttpStatus.OK);
     }
