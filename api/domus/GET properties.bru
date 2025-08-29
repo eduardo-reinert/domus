@@ -1,0 +1,21 @@
+meta {
+  name: GET properties
+  type: http
+  seq: 5
+}
+
+get {
+  url: http://localhost:8080/domus/properties
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "email": "teste@mail.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

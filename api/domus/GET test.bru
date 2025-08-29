@@ -1,0 +1,15 @@
+meta {
+  name: GET test
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8080/domus
+  body: json
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: GET  installments
+  type: http
+  seq: 4
+}
+
+get {
+  url: http://localhost:8080/domus/installments/
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "property_id": 1,
+    "address": "Rua Tucano, 69",
+    "size_m2": 92,
+    "cub_number": 52.7234,
+    "total_installments": 80
+  }
+}
+
+settings {
+  encodeUrl: true
+}
