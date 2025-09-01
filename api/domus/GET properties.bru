@@ -5,9 +5,13 @@ meta {
 }
 
 get {
-  url: http://localhost:8080/domus/properties
-  body: json
+  url: http://localhost:8080/domus/properties?email=teste@mail.com
+  body: none
   auth: inherit
+}
+
+params:query {
+  email: teste@mail.com
 }
 
 body:json {
