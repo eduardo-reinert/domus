@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import api from "../../api/axios";
 import type { Property } from "../../types";
+import Navbar from "../common/Navbar";
 
 const PropertiesPage: React.FC = () => {
   const [properties, setProperties] = useState<Property[]>([]);
@@ -38,6 +39,7 @@ const PropertiesPage: React.FC = () => {
 
   return (
     <div>
+      <Navbar></Navbar>
       <h1>Properties</h1>
       <ul>
         {properties.map((property, index) => (
